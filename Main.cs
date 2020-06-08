@@ -10,7 +10,7 @@ namespace Kryptographie
     {
         static void Main(string[] args)
         {
-            MainMenu();
+            run();
         }
     }
 }

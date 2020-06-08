@@ -46,8 +46,8 @@
     <Compile Include="Helpers\DateiSchreiben.cs" />
     <Compile Include="Helpers\GetMethodByInt.cs" />
     <Compile Include="Helpers\InputMaskKey.cs" />
-    <Compile Include="MainMenu.cs" />
-    <Compile Include="RunProcess.cs" />
+    <Compile Include="run.cs" />
+    <Compile Include="Verschluesselungen\RunProcess.cs" />
     <Compile Include="Verschluesselungen\Caesar\Caesar.cs" />
     <Compile Include="Verschluesselungen\Caesar\CaesarEntschluesseln.cs" />
     <Compile Include="Verschluesselungen\Caesar\CaesarVerschluesseln.cs" />

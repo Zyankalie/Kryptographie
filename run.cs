@@ -2,7 +2,7 @@
 {
     partial class main
     {
-        static void MainMenu()
+        static void run()
         {
             string[] encryptionMethods = { "Caesar", "Vigenere", "OTP", "Programm schließen." };
             string[] encryptionDecryption = { "Verschlüsseln", "Entschlüsseln", "Zurück" };
