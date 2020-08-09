@@ -1,4 +1,9 @@
-﻿using System.Runtime.Remoting.Messaging;
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        GetMethodByInt.cs
+//Datum:        15.06.2020
+//Beschreibung: Mapping-Funktion
+using System.Runtime.Remoting.Messaging;
 
 namespace Kryptographie
 {

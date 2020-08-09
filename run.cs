@@ -1,4 +1,9 @@
-﻿namespace Kryptographie
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        run.cs
+//Datum:        15.06.2020
+//Beschreibung: 
+namespace Kryptographie
 {
     partial class main
     {
@@ -38,6 +43,8 @@
                             {
                                 if (InputMaskPath(true, true, ref sourcePath))
                                 {
+                                    textToWorkOn = "";
+                                    resultText = "";
                                     DateiEinlesen(ref textToWorkOn, sourcePath);
                                     destPathSelection = true;
                                     do
@@ -76,6 +83,8 @@
                             {
                                 if (InputMaskPath(true, false, ref sourcePath))
                                 {
+                                    textToWorkOn = "";
+                                    resultText = "";
                                     DateiEinlesen(ref textToWorkOn, sourcePath);
                                     destPathSelection = true;
                                     do
@@ -130,6 +139,8 @@
                             {
                                 if (InputMaskPath(true, true, ref sourcePath))
                                 {
+                                    textToWorkOn = "";
+                                    resultText = "";
                                     DateiEinlesen(ref textToWorkOn, sourcePath);
                                     destPathSelection = true;
                                     do
@@ -168,6 +179,8 @@
                             {
                                 if (InputMaskPath(true, false, ref sourcePath))
                                 {
+                                    textToWorkOn = "";
+                                    resultText = "";
                                     DateiEinlesen(ref textToWorkOn, sourcePath);
                                     destPathSelection = true;
                                     do
@@ -222,24 +235,27 @@
                             {
                                 if (InputMaskPath(true, true, ref sourcePath))
                                 {
+                                    textToWorkOn = "";
+                                    resultText = "";
                                     DateiEinlesen(ref textToWorkOn, sourcePath);
                                     destPathSelection = true;
                                     do
                                     {
                                         if (InputMaskPath(false, true, ref destPath))
                                         {
-                                            if (InputMaskKey(selectedEncryptionMethod, ref key))
-                                            {
-                                                RunProcess(true, selectedEncryptionMethod, key, ref textToWorkOn, ref resultText);
-                                                DateiSchreiben(resultText, destPath);
-                                                destPathSelection = false;
-                                                sourcePathSelection = false;
-                                                encDecActive = false;
-                                            }
-                                            else
-                                            {
-                                                //Nichts
-                                            }
+                                            //if (InputMaskKey(selectedEncryptionMethod, ref key))
+                                            //{
+                                            KeyGen(ref key, textToWorkOn.Length);
+                                            RunProcess(true, selectedEncryptionMethod, key, ref textToWorkOn, ref resultText);
+                                            DateiSchreiben(resultText, destPath);
+                                            destPathSelection = false;
+                                            sourcePathSelection = false;
+                                            encDecActive = false;
+                                            //}
+                                            //else
+                                            //{
+                                            //    //Nichts
+                                            //}
                                         }
                                         else
                                         {
@@ -260,24 +276,20 @@
                             {
                                 if (InputMaskPath(true, false, ref sourcePath))
                                 {
+                                    textToWorkOn = "";
+                                    resultText = "";
                                     DateiEinlesen(ref textToWorkOn, sourcePath);
                                     destPathSelection = true;
                                     do
                                     {
                                         if (InputMaskPath(false, false, ref destPath))
                                         {
-                                            if (InputMaskKey(selectedEncryptionMethod, ref key))
-                                            {
-                                                RunProcess(false, selectedEncryptionMethod, key, ref textToWorkOn, ref resultText);
-                                                DateiSchreiben(resultText, destPath);
-                                                destPathSelection = false;
-                                                sourcePathSelection = false;
-                                                encDecActive = false;
-                                            }
-                                            else
-                                            {
-                                                //Nichts
-                                            }
+                                            DateiEinlesen(ref key, "key.txt");
+                                            RunProcess(false, selectedEncryptionMethod, key, ref textToWorkOn, ref resultText);
+                                            DateiSchreiben(resultText, destPath);
+                                            destPathSelection = false;
+                                            sourcePathSelection = false;
+                                            encDecActive = false;
                                         }
                                         else
                                         {

@@ -1,4 +1,9 @@
-﻿using System.IO;
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        CaesarVerschluesseln.cs
+//Datum:        15.06.2020
+//Beschreibung: Caesarverschlüsselung
+using System.IO;
 using System.Text;
 
 namespace Kryptographie
@@ -7,13 +12,8 @@ namespace Kryptographie
     {
         static void CaesarVerschluesseln(string text, ref string verschluesselt, int key)
         {
-            int tmpVerschluesselt;
             for (int i = 0; i < text.Length; i++)
-            {
-                tmpVerschluesselt = text[i] % 128 + key;
-                tmpVerschluesselt = tmpVerschluesselt < 30 ? tmpVerschluesselt + 30 : tmpVerschluesselt;
-                verschluesselt += (char)tmpVerschluesselt;
-            }
+                verschluesselt += (char)((text[i] + key) % 127);
         }
     }
 }

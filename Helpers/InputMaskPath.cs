@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        InputMaskPath.cs
+//Datum:        15.06.2020
+//Beschreibung: Inputmask für pfad
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

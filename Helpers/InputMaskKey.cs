@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        InputMaskKey.cs
+//Datum:        15.06.2020
+//Beschreibung: Eingabemaske für einen Key
+using System;
 
 namespace Kryptographie
 {
@@ -47,7 +52,7 @@ namespace Kryptographie
                     }
                     else if (encryptionMethod == 1)
                     {
-                        //Vigenere-Regeln
+                        encryptionKey += key.KeyChar;
                     }
                     else if (encryptionMethod == 2)
                     {

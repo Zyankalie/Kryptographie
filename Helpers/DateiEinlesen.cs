@@ -1,4 +1,9 @@
-﻿using System.IO;
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        DateiEinlesen.cs
+//Datum:        15.06.2020
+//Beschreibung: Liest eine Textdatei in einen String
+using System.IO;
 using System.Text;
 
 namespace Kryptographie

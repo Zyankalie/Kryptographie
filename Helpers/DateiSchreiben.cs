@@ -1,4 +1,9 @@
-﻿using System.IO;
+﻿//Autor:        Jan-Lukas Spilles
+//Klasse:       IA119
+//Datei:        DateiSchreiben.cs
+//Datum:        15.06.2020
+//Beschreibung: Schreibt einen String in eine Textdatei
+using System.IO;
 using System.Text;
 
 namespace Kryptographie

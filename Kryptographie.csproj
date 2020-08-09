@@ -43,10 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\KeyGen.cs" />
     <Compile Include="Helpers\DateiSchreiben.cs" />
     <Compile Include="Helpers\GetMethodByInt.cs" />
     <Compile Include="Helpers\InputMaskKey.cs" />
     <Compile Include="run.cs" />
+    <Compile Include="Verschluesselungen\OTP\Otp.cs" />
+    <Compile Include="Verschluesselungen\OTP\OtpEntschluesseln.cs" />
+    <Compile Include="Verschluesselungen\OTP\OtpVerschluesseln.cs" />
     <Compile Include="Verschluesselungen\RunProcess.cs" />
     <Compile Include="Verschluesselungen\Caesar\Caesar.cs" />
     <Compile Include="Verschluesselungen\Caesar\CaesarEntschluesseln.cs" />
@@ -57,9 +61,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\ShowMenu.cs" />
     <Compile Include="Helpers\WriteWithColor.cs" />
+    <Compile Include="Verschluesselungen\Vigenere\Vigenere.cs" />
+    <Compile Include="Verschluesselungen\Vigenere\VigenereEntschluesseln.cs" />
+    <Compile Include="Verschluesselungen\Vigenere\VigenereVerschluesseln.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
